@@ -24,4 +24,5 @@ members = [
   "20_drop_trait",
   "21_reference_counting",
   "22_interior_mutability",
+  "23_reference_cycles",
 ]
