@@ -1,5 +1,5 @@
 [package]
-name = "box_smart_poitner"
+name = "box_smart_pointer"
 version = "0.1.0"
 edition = "2021"
 
