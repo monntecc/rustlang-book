@@ -1,0 +1,21 @@
+[workspace]
+
+members = [
+  "1_hello_world",
+  "2_guessing_game",
+  "3_common_concepts",
+  "4_ownership",
+  "5_structs",
+  "6_enums_pattern_matching",
+  "7_module_system",
+  "8_collections",
+  "9_error_handling",
+  "10_generics",
+  "11_traits",
+  "12_lifetimes",
+  "13_tests",
+  "14_minigrep_cli_app",
+  "15_closures",
+  "16_iterators",
+  "17_publishing",
+]
