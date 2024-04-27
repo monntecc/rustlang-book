@@ -31,15 +31,11 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
   using query from function parameters
 */
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut results = Vec::new();
-
-    for line in contents.lines() {
-        if line.contains(query) {
-            results.push(line);
-        }
-    }
-
-    results
+    // Simplify function using collection methods
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
 
 /*
@@ -48,15 +44,12 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 */
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let query = query.to_lowercase();
-    let mut results = Vec::new();
 
-    for line in contents.lines() {
-        if line.to_lowercase().contains(&query) {
-            results.push(line);
-        }
-    }
-
-    results
+    // Simplify function using collection methods
+    contents
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query))
+        .collect()
 }
 
 /*
@@ -78,17 +71,21 @@ impl Config {
         Function to parse our cli arguments config,
         and return tuple with query and filename.
     */
-    pub fn new(args: &[String]) -> Result<Config, &str> {
-        // Check if length of the arguments is not smaller than 3
-        if args.len() < 3 {
-            return Err("Not enough arguments, please specify: `query` and `filename`");
-        }
+    pub fn new(mut args: env::Args) -> Result<Config, &'static str> {
+        args.next(); // Will skip first cmd line argument, which is a path to a binary
 
-        // Get second argument variable ('cause first one is by default an executable path),
-        // for searching query
-        let query = args.get(1).unwrap().to_string().clone();
-        // Get third argument variable for a filename
-        let filename = args.get(2).unwrap().to_string().clone();
+        // Get argument variable for a query
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string!"),
+        };
+
+        // Get argument variable for a filename
+        let filename = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string!"),
+        };
+
         // Get environment variable to check if we are using case insensitive
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
 

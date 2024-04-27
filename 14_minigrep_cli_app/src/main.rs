@@ -6,10 +6,10 @@ use minigrep_cli_app::Config;
 fn main() {
     // Collect arguments from the cli, passed after cargo run command,
     // or executable, e.g: (cargo run test poem.txt) or (./app.exe test poem.exe)
-    let args: Vec<String> = env::args().collect();
+    //let args: Vec<String> = env::args().collect();
 
     // Get query and filename from cli arguments
-    let config: Config = Config::new(&args).unwrap_or_else(|error| {
+    let config: Config = Config::new(env::args()).unwrap_or_else(|error| {
         // Print error information
         eprintln!("Problem parsing arguments: {}", error);
         // Exit the application
