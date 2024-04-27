@@ -22,4 +22,5 @@ members = [
   "18_box_smart_pointer",
   "19_deref_trait",
   "20_drop_trait",
+  "21_reference_counting",
 ]
