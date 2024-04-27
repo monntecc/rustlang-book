@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 
 members = [
   "1_hello_world",
@@ -18,4 +19,5 @@ members = [
   "15_closures",
   "16_iterators",
   "17_publishing",
+  "18_box_smart_poitner",
 ]
