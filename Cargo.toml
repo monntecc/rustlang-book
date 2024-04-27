@@ -20,4 +20,5 @@ members = [
   "16_iterators",
   "17_publishing",
   "18_box_smart_pointer",
+  "19_deref_trait",
 ]
