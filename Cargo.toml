@@ -32,4 +32,5 @@ members = [
   "28_trait_objects",
   "29_state_design_pattern",
   "30_patterns_and_matching",
+  "31_pattern_syntax",
 ]
