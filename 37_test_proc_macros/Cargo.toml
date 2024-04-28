@@ -1,0 +1,10 @@
+[package]
+name = "test_proc_macros"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+procedural_macros = { path = "../procedural_macros" }
+procedural_macros_derive = { path = "../procedural_macros_derive" }

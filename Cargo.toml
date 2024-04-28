@@ -38,4 +38,5 @@ members = [
   "34_advanced_types",
   "35_advanced_functions_and_closures",
   "36_macros",
+  "37_test_proc_macros",
 ]
