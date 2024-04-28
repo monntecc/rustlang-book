@@ -30,4 +30,5 @@ members = [
   "26_sharing_state",
   "27_oop",
   "28_trait_objects",
+  "29_state_design_pattern",
 ]
