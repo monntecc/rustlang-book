@@ -25,4 +25,5 @@ members = [
   "21_reference_counting",
   "22_interior_mutability",
   "23_reference_cycles",
+  "24_threads",
 ]
