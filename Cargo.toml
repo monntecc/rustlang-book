@@ -28,4 +28,5 @@ members = [
   "24_threads",
   "25_message_passing",
   "26_sharing_state",
+  "27_oop",
 ]
