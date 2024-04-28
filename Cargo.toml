@@ -29,4 +29,5 @@ members = [
   "25_message_passing",
   "26_sharing_state",
   "27_oop",
+  "28_trait_objects",
 ]
