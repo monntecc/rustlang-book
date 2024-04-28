@@ -35,4 +35,5 @@ members = [
   "31_pattern_syntax",
   "32_writing_unsafe",
   "33_advanced_traits",
+  "34_advanced_types",
 ]
