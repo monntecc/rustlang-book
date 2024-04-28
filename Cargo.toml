@@ -26,4 +26,5 @@ members = [
   "22_interior_mutability",
   "23_reference_cycles",
   "24_threads",
+  "25_message_passing",
 ]
