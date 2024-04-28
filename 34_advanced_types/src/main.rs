@@ -5,8 +5,6 @@
     We’ll also discuss the ! type and dynamically sized types.
 */
 
-use core::panicking::panic;
-
 #[allow(dead_code)]
 #[allow(unused_variables)]
 
