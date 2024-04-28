@@ -27,4 +27,5 @@ members = [
   "23_reference_cycles",
   "24_threads",
   "25_message_passing",
+  "26_sharing_state",
 ]
